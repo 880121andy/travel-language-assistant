@@ -1,7 +1,8 @@
-# 🌍 Travel Language Learning Voice Assistant
+# 🌍 Travel Language Learning Voice Assistant (Homework Edition)
 
-A local, privacy-friendly voice assistant for travelers that helps practice speaking in a target language. It uses:
-- **Ollama** for on-device LLM chat generation
+A local voice assistant for practicing a target language in travel contexts. Built for a homework/demo scenario: minimal dependencies, easy local setup.
+It uses:
+- **Ollama** for local LLM generation
 - **Whisper (faster-whisper)** for speech-to-text
 - **Gradio** for a simple web UI
 
@@ -13,16 +14,34 @@ A local, privacy-friendly voice assistant for travelers that helps practice spea
 - Scenario role-play modes (Restaurant, Hotel, Directions, Shopping, Emergency)
 - Cultural/etiquette tips every few turns
 - Optional streaming responses
- - Text-to-Speech playback of assistant reply (Edge TTS voices)
- - Progress tracking: turn count, corrections, top vocabulary
- - Vocabulary accumulation from target-language replies
+- Text-to-Speech playback of assistant reply (Edge TTS voices)
+- Progress tracking: turn count, corrections, top vocabulary
+- Vocabulary accumulation from target-language replies
 
 ## Requirements
 - Windows (PowerShell 5.1) with Python 3.10+ recommended
 - Ollama running (via WSL2 if native Windows build unavailable)
 - (Optional) GPU for Whisper acceleration (CUDA)
 
-## Installation
+## Quick Start (Windows PowerShell)
+
+```powershell
+cd "c:\Users\andy9\OneDrive\桌面\新增資料夾"
+python -m venv .venv
+.venv\Scripts\activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+Make sure Ollama is running (in WSL or native) and the model (e.g. `llama3`) is pulled.
+
+Then:
+```powershell
+python app.py
+```
+Open the printed Gradio URL.
+
+## Detailed Installation
 
 ### 1. Install Ollama (Windows via WSL2)
 Open **Windows Terminal** and create/update WSL (Ubuntu recommended):
@@ -95,5 +114,5 @@ Delete `progress.json` to reset stats.
 - Track learner progress and vocabulary.
 - Provide spaced repetition quizzes.
 
-## License
-Internal use—adjust and integrate as needed.
+## Notes
+This repository is for coursework/homework demonstration; no license file included. If you later publish publicly, add a proper LICENSE file (e.g. MIT).
