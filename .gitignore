@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+progress.json
+assistant_output.mp3
+.env
+*.wav
+*.mp3
+# Gradio temp
+log/*.log
