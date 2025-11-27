@@ -59,7 +59,7 @@ Leave WSL running; Ollama listens on `http://localhost:11434` accessible from Wi
 
 ### 2. Clone / Prepare Project
 ```powershell
-cd "c:\Users\andy9\OneDrive\桌面\新增資料夾"
+git clone https://github.com/880121andy/travel-language-assistant
 python -m venv .venv
 .venv\Scripts\activate
 pip install --upgrade pip
